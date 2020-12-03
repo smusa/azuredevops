@@ -15,7 +15,7 @@ jobs:
     inputs:
       packageType: 'sdk'
       version: '2.2.401'
-  - script: dotnet build ./SimplCommerce-dup.sln
+  - script: dotnet build ./SimplCommerce.sln
     displayName: 'dotnet build'
   - script: ./run-tests.sh
     displayName: 'run tests'
