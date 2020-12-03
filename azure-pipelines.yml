@@ -9,13 +9,13 @@ trigger:
 jobs:
 - job: Linux
   pool:
-    vmImage: 'Ubuntu Fake'
+    vmImage: 'Ubuntu 16.04'
   steps:
   - task: DotNetCoreInstaller@0
     inputs:
       packageType: 'sdk'
       version: '2.2.401'
-  - script: dotnet build ./SimplCommerce.sln
+  - script: dotnet build ./SimplCommerce-dup.sln
     displayName: 'dotnet build'
   - script: ./run-tests.sh
     displayName: 'run tests'
